@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P M A S</title>
+</head>
+    <!-- 引入自定义CSS样式 -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/left-nav.css">
+<body>
+    <!-- 顶部导航栏 -->
+    <!-- 粘滞定位实现固定导航栏 -->
+    <div class="top_nav">
+        <ul class="nav_ul">
+            <li class="nav_li">
+                <img src="./images/icon/mine_white.png" alt="mine" class="top_icon" id="mine">
+            </li>
+            <li class="nav_li"><a herf="#">首页</a></li>
+            <li class="nav_li"><a herf="#">日程</a></li>
+            <li class="nav_li"><a herf="#">联系人</a></li>
+            <li class="nav_li"><a herf="#">便笺</a></li>
+            <li class="nav_li"><a herf="#">区号</a></li>
+            <li class="nav_li"><a herf="#">邮编</a></li>
+            <li class="nav_li more">more</li>
+            <li class="nav_li">
+                <div class="search_li">
+                    <input type="text" placeholder="Search..." maxlength="5" class="search_input">
+                    <div class="search_div"></div>
+                  </div>
+            </li>
+        </ul>
+    </div>
+    
+    <!-- 侧边栏 -->
+    <div class="left_div" id="left_div">
+        <div class="left_nav">
+            <!-- 用户信息区 -->
+            <div class="user">
+                <!-- 头像 -->
+                <div class="user_pic_div">
+                    <a href="./pages/login.html" target="_blank">
+                        <img src="./images/background/562af86769401b4d5866342c.jpg" alt="" class="user_pic" id="user_pic">
+                    </a>    
+                </div>
+                <!-- 昵称、签名 -->
+                <div class="name">
+                    <span class="user_name">洵山°</span>
+                    <span class="user_name">今者不乐，逝者其亡</span>
+                </div>
+            </div>
+            <!-- 内容区 -->
+            <div class="left_content">
+                <ul class="left_ul" id="left_ul">
+                     <!-- 天气 --> 
+                    <li class="left_li" id="left_li">
+                        <div class="information_name">
+                            <span>W&nbsp;e&nbsp;a&nbsp;t&nbsp;h&nbsp;e&nbsp;r</span>
+                            <img src="./images/icon/weather.png" alt="" class="icon left_icon">   
+                        </div>
+                    </li>
+                    <hr>
+                    <li class="left_li" id="left_li">
+                        <div class="information">
+                            <div id="weather-v2-plugin-simple"></div>
+                        </div>
+                    </li>
+
+                    <!-- 地址 -->
+                    <li class="left_li" id="left_li">
+                        <li class="left_li" id="left_li">
+                            <div class="information_name">
+                                <span>A&nbsp;d&nbsp;d&nbsp;r&nbsp;e&nbsp;s&nbsp;s</span>
+                                <img src="./images/icon/location_white.png" alt="" class="icon left_icon">   
+                            </div>
+                        </li>
+                        <hr>
+                    </li>
+                    <div class="loc_div">
+                        <li class="left_li" id="left_li">
+                            <li class="information loc_li latitude">Latitude :</li>
+                            <li class="information" id="demo_one"></li>
+                            <li class="information loc_li longitude">Longitude :</li>
+                            <li class="information" id="demo_two"></li>
+                        </li> 
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div> 
+
+
+    <!-- 内容区 -->
+    <div class="container">
+        <!-- 主页面1 -->
+        <div class="frist_page">
+            <!-- 简介 -->
+            <div class="introduce_div">
+                <span class="introduce_span">PMAS</span>
+                <span class="introduce_span_main">
+                    In your PMAS , you can  Make your travel plan , manage your mobile contacts and record daily affairs
+                </span>
+            </div>
+            <img src="./images/background/main.jpg" alt="" class="background_frist">
+        </div>
+        <!-- 网格布局 -->
+        <div class="grid_container">
+                <!-- 日程安排 -->
+                <div class="second_page">
+                <span class="second_title">
+                    daily schedule
+                </span>
+                <span class="second_content">
+                    Set a custom background image to start every browsing session with a view that’s all your own. And decide what appears on your start page — such as your Reading List, Favorites, iCloud Tabs, Siri Suggestions, and even a new Privacy Report.
+                </span>
+                <div class="second_pic">
+                    <div class="calendar">
+                        <p id="monthName"></p>
+                        <p id="dayName"></p>
+                        <p id="dayNumber"></p>
+                        <p id="year"></p>
+                    </div>
+                </div>
+                <span class="second_footer">
+                    <button class="second_btn" id="second_btn">
+                        <span>
+                                learn more
+                        </span>
+                        </button>
+                </span>
+                </div>
+                <div class="second_display">
+                    <ul class="second_ul" id="second_ul">
+                        <li class="second_li">Buy milk</li>
+                        <li class="second_li">Take the dog for a walk</li>
+                        <li class="second_li">Exercise</li>
+                        <li class="second_li">Write code</li>
+                        <li class="second_li">Play music</li>
+                        <li class="second_li">Relax</li>
+
+                    </ul>
+                </div>
+                <!-- 通讯录 -->
+                  <div class="third_page" id="third_page">
+                    <span class="third_title">Improved tab design</span>
+                    <span class="third_content">Tab lovers rejoice: An elegant new look means more tabs are visible at once. You can hover over any tab to bring up an instant page preview. And when you have several tabs open, Safari makes it easy to find the one you’re looking for with a new space-efficient design.</span>
+                    <!-- 展示区 -->
+                    <div class="third_display" id="third_display">
+                        <ul class="third_ul">
+                                <div class="crossing"></div>
+                                <li class="third_li">
+                                    联系人一
+                                </li>
+                                <div class="crossing"></div>
+                                <li class="third_li">
+                                    联系人二
+                                </li>
+                                <div class="crossing"></div>
+                                <li class="third_li">
+                                    联系人三
+                                </li>
+                                <div class="crossing"></div>
+                                <li class="third_li">
+                                    联系人四
+                                </li>
+                        </ul>
+                    </div>
+                    <!-- 竖线 -->
+                    <div class="y_axis" id="y_axis"></div>
+                    <!-- 联系人展示 -->
+                    <div class="third_main" id="third_main">
+                        <div class="third_img">
+                            <img src="./images/icon/user_black.png" alt="" class="icon third_icon">
+                            <img src="./images/icon/collect_white.png" alt="" class="icon third_icon collect">
+                        </div>
+                        <div class="third_more">
+                            <span>T&nbsp;E&nbsp;L</span>
+                            <hr/>
+                        </div>
+                        <!-- 电话 -->
+                        <div class="third_tel">
+                            <ul class="tel_ul">
+                                <li class="tel_li">
+                                    <span>电话一</span>
+                                    <img src="./images/icon/tel_white.png" alt="" class="icon third_li_icon">
+                                </li>
+                                <li class="tel_li">
+                                    <span>电话二</span>
+                                    <img src="./images/icon/tel_white.png" alt="" class="icon third_li_icon">
+                                </li>
+                                <li class="tel_li">
+                                    <span>电话三</span>
+                                    <img src="./images/icon/tel_white.png" alt="" class="icon third_li_icon">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- 地址簿 -->
+                <div class="forth_page_second" id="forth_page">
+                    <!-- 更多 -->
+                    <div class="plus_div">
+                        <img src="./images/icon/plus.png" alt="" class="icon plus" id="plus">
+                    </div>
+                    <!-- 展示区 -->
+                    <div class="forth_display" id="forth_display">
+                        <span class="forth_title">Message effects</span>
+                        <span class="forth_content forth_content_one">Because</span>
+                        <span class="forth_content forth_content_two">sometimes,</span>
+                        <span class="forth_content forth_content_three">words just</span>
+                        <span class="forth_content forth_content_four">aren’t enough.</span>
+                    </div>
+                    <span class="forth_main forth_second" id="forth_main">
+                        Message effects come to Mac. Choose from effects that take up the entire screen — like balloons, confetti, or lasers — or effects that change how individual message bubbles animate. You can even send a message with invisible ink that stays blurred until you swipe over it with your cursor.
+                    </span>
+                </div>
+
+                <!-- 邮编 -->
+                <div class="fifth_page" id="fifth_page">
+
+                </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+<script>
+    
+</script> 
+ <!-- 引入jquery -->
+ <script src="js/jquery-3.5.1.min.js"></script>
+ <!-- 引入自定义JavaScript样式 -->
+ <script src="./js/index.js"></script>
+ <!-- 天气 -->
+ <script>WIDGET = {CONFIG:{"modules":"234","background":5,"tmpColor":"FFFFFF","tmpSize":16,"cityColor":"FFFFFF","citySize":16,"aqiSize":16,"weatherIconSize":"20","alertIconSize":18,"padding":"10px 10px 10px 10px","shadow":"0","language":"en","fixed":"false","vertical":"middle","horizontal":"left","key":"p5v1hOG0Uq"}}</script>
+ <script src="https://apip.weatherdt.com/simple/static/js/weather-simple-common.js?v=2.0"></script>
+</body>
+</html>
+ 

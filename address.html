@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/jquery-3.5.1.min.js"></script>
+<body>
+<p id="demo_one">点击这个按钮，获得您的坐标：</p>
+<p id="demo_two">点击这个按钮，获得您的坐标：</p>
+
+<button onclick="getLocation()">试一下</button>
+<script>
+function getLocation()
+  {
+  if (navigator.geolocation)
+    {
+    navigator.geolocation.getCurrentPosition(showPosition);
+    console.log("111")
+    }else{
+      $('#demo_one').html("Geolocation is not supported by this browser.");
+    }
+  }
+function showPosition(position)
+  {
+    $('#demo_one').html(position.coords.latitude);  
+    $('#demo_two').html(position.coords.longitude);  
+    return position;
+  }
+
+</script>
+
+</body>
+</html>
